@@ -43,21 +43,21 @@ html, body {
     border-top-left-radius: 7px;
   }
   
-  .navbar a:hover {
+  .navbar li a:hover {
     color: #35167c !important;
     background-color: #ffffff !important;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
   }
   
-  .navbar a:focus {
+  .navbar li a:focus {
     color: #000000 !important;
     background-color: #ffffff !important;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
   }
   
-  .navbar a:active {
+  .navbar li a:active {
     color: #000000 !important;
     background-color: #ffffff !important;
     border-top-right-radius: 7px;
