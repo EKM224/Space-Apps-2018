@@ -1,0 +1,15 @@
+body {
+    margin-top: 20px;
+}
+
+.mission-info {
+    margin-top: 20px;
+}
+
+.mission-info tr {
+    font-family: "Brandon Grotesque","brandon-grotesque", Helvetica,sans-serif;
+    font-weight: 30px;
+    color: white;
+    margin-top: 300;
+}
+
