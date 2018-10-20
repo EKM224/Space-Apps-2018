@@ -187,5 +187,8 @@ html, body {
   }
   
   #video-placeholder {
-    margin: 0 auto;
+    height: 100%;
+    position: absolute;
+    right: 0;
   }
+
