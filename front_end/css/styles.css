@@ -53,11 +53,15 @@ html, body {
   .navbar a:focus {
     color: #000000 !important;
     background-color: #ffffff !important;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
   }
   
   .navbar a:active {
     color: #000000 !important;
     background-color: #ffffff !important;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
   }
   
   /* .navbar a:visited {
