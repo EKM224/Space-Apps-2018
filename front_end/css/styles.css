@@ -192,6 +192,7 @@ html, body {
     position: fixed;
     right: 0;
     width: 50%;
+
   }
 
   #list {
@@ -208,7 +209,7 @@ html, body {
     color: white;
     background-color: #35167c;
     border: solid #35167c;
-    padding: 5px 10px;
+    padding: 10px 10px;
   }
 
   #list ul {
@@ -220,16 +221,12 @@ html, body {
 
   #list li {
     background-color: #35167c;
+    overflow: hidden;
     height: 40px;
     line-height: 40px;
     color: #ffffff;
     font-weight: 700;
     padding: 0 0 0 7px;
-  }
-
-  #list li:hover span {
-    width: 40px;
-    opacity: 1.0;
   }
 
   #list li:nth-child(2n-1) {
