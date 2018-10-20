@@ -7,7 +7,6 @@ var player;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video-placeholder', {
-        frameborder: "0",
         videoId: 'sB_nEtZxPog',
         playerVars: {
             autoplay: 1,
