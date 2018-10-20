@@ -188,7 +188,17 @@ html, body {
   
   #video-placeholder {
     height: 100%;
-    position: absolute;
+    position: fixed;
     right: 0;
+    width: 50%;
+  }
+
+  #list {
+    width: 50%;
+    word-wrap: break-word;
+  }
+
+  #list h1 {
+    margin-top: 100px;
   }
 
