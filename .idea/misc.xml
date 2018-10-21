@@ -3,5 +3,12 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6" project-jdk-type="Python SDK" />
+  <component name="PythonCompatibilityInspectionAdvertiser">
+    <option name="version" value="3" />
+  </component>
+=======
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (pygameTest)" project-jdk-type="Python SDK" />
+>>>>>>> 39424898eb578800c436acd0e9c75e506812584c
 </project>
