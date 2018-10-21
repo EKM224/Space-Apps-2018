@@ -40,28 +40,21 @@ html, body {
     border-bottom: none;
     border-left: none;
     border-width: 1px;
-    border-top-left-radius: 7px;
   }
   
   .navbar li a:hover {
     color: #35167c !important;
     background-color: #ffffff !important;
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
   }
   
   .navbar li a:focus {
     color: #000000 !important;
     background-color: #ffffff !important;
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
   }
   
   .navbar li a:active {
     color: #000000 !important;
     background-color: #ffffff !important;
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
   }
   
   /* .navbar a:visited {
