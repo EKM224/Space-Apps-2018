@@ -6,7 +6,7 @@ var Model = {
     monthCover : 4,
     activeStartDate: "",
     activeEndDate: "",
-    pageViews: [IndividualLaunchPageView, ListPageView],
+    pageViews: [],
 
     __init__ : function(stuff) {
         this.activeStartDate  = this.formatTime();
@@ -34,6 +34,9 @@ var Model = {
         //this.fetchData(this.activeStartDate);
         return null;
     },
+    setViews : function(views) {
+        views.forEach((view)=>{this.pageViews.push(view)});
+    },
 
     fetchData: function(startTime) {
 
@@ -47,13 +50,10 @@ var Model = {
     },
     addFourMonths: function(formattedTime) {
         let timeArray = formattedTime.split("-");
-        console.log(timeArray);
         month = Number(timeArray[1]) + 4;
-        console.log(month);
         if (month>12) {
             month -=12;
             timeArray[0] = (Number(timeArray[0])+1).toString();
-            console.log(timeArray[0]);
         }
         timeArray[1] = month.toString();
         // return year - month - day
@@ -72,7 +72,11 @@ var Model = {
             date: launchApiObject.net,
             id: launchApiObject.id,
             vidURL: launchApiObject.vidURL,
-            lsp : launchApiObject.lsp
+            lsp : launchApiObject.lsp,
+            location : {
+                longitude: launchApiObject.location[0].longitude,
+                latitude: launchApiObject.location[0].latitude
+            }
         }
         //The lsp returns an intetger
     },
@@ -152,6 +156,7 @@ var updateVideo = new CustomEvent("updateVideo");
 var goToIndividual = new CustomEvent("individual");
 
 Model.__init__();
+Model.setViews([ListPageView,IndividualLaunchPageView]);
 document.addEventListener("updateList", ()=> {ListView.update()});
 document.addEventListener("updateVideo", ()=> {VideoView.update()});
 document.addEventListener("individual", ()=> {
@@ -159,3 +164,5 @@ document.addEventListener("individual", ()=> {
         view.toggleDisplay();
     })
 })
+
+document.dispatchEvent(updateList);
