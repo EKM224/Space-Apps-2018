@@ -1,33 +1,27 @@
-// function contains(text1, text2) {
-//     if (text1.indexof(text2) != -1) {
-//         return true;
-//     }
-// }
-
-// $("searchText").keyup(function() {
-//     var searchText = ("#searchText").val().toLowerCase()
-//     $("ul li").each(function() {
-//         if (!contains($(this).text().toLowerCase(), searchText))
-//             $(this).hide();
-//         else
-//             $(this).show();
-//     });
-// });
-
-function myFunction() {
+function searchFunction() {
     // Declare variables
     var input, filter, ul, li, a, i;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
+    input = document.getElementById('search');
+    filter = input.value.toLowerCase();
+    ul = document.querySelector('#list ul');
     li = ul.getElementsByTagName('li');
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        if (a.getAttribute("company") === filter) {
             li[i].style.display = "";
-        } else {
+        }
+        else if (a.getAttribute("date") === filter) {
+            li[i].style.display = "";
+        }
+        else if (a.getAttribute("payload") === filter) {
+            li[i].style.display = "";
+        }
+        else if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } 
+        else {
             li[i].style.display = "none";
         }
     }
