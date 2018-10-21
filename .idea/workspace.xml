@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="803ce6f1-8e24-4a87-847b-0ee4c9f49a71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/scrapper/scrapping_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/scrapper/scrapping_test.py" afterDir="false" />
-    </list>
+    <list default="true" id="803ce6f1-8e24-4a87-847b-0ee4c9f49a71" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="scrapping_test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="scrapping_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/back_end/scrapper/scrapping_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -32,14 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scrapping_api.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scrapping_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/back_end/scrapper/scrapping_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -99,12 +92,6 @@
               <item name="Space-Apps-2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="Space-Apps-2018" type="462c0819:PsiDirectoryNode" />
               <item name="back_end" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Space-Apps-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Space-Apps-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="back_end" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -235,10 +222,10 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30838323" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30838323" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32934132" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17130308" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
@@ -270,22 +257,19 @@
     <entry file="file://$PROJECT_DIR$/back_end/scrapper/testest.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/back_end/scrapper/scrapping_test.py">
+    <entry file="file://$PROJECT_DIR$/back_end/scrapper/scrapping_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back_end/scrapper/scrapping_api.py">
+    <entry file="file://$PROJECT_DIR$/back_end/scrapper/scrapping_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="300">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
