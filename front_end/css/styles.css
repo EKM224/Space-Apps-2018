@@ -18,6 +18,35 @@ html, body {
     padding-top: 7px;
     min-width: 300px;
   }
+
+  #back-button {
+    height: auto;
+    width: auto;
+    max-height: 20px;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #back {
+     background-color: #35167c !important;
+     border-right: solid #ffffff 1px;
+  }
+
+  #back span {
+    text-align: center;
+    color: white;
+    padding-left: 5px;
+    width: 0px !important;
+    display: inline-block;
+    transition: 0.3s linear;
+    opacity: 0;
+  }
+
+  #back:hover span {
+    margin-right: 40px;
+    width: 40px;
+    opacity: 1.0;
+  }
   
   .navbar-default {
     background-color: #35167c;
