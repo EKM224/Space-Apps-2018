@@ -9,7 +9,7 @@ function findNearbyLaunch(yourPosition) {
     let minDistance = model.launches[0];
     let count = 0;
     let closestID = 0;
-    for (x in launchInformation){
+    for (x in model.launches){
         ul = document.getElementById("myUL");
         li = ul.getElementsByTagName('li');
         let distance1 = (x.position.longitude - yourPosition.longitude)**2;
@@ -18,20 +18,20 @@ function findNearbyLaunch(yourPosition) {
         let maxDistance = Math.atan(60/(2*(myDistance/111111)));
         if (myDistance <= maxDistance){
             for (y in li){
-                if(x.ID == y.index)
+                if(x.id == y.index)
                     y.style.display = "";
                     count++;
             }
         }
         else{
             for (y in li){
-                if(x.ID == y.index)
+                if(x.id == y.index)
                     y.style.display = "none";
             }
         }
         if (myDistance < minDistance)
             minDistance = myDistance;
-            closestID = x.ID;
+            closestID = x.id;
 
     }
     if (count === 0){
