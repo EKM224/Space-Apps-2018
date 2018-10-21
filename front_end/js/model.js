@@ -1,13 +1,12 @@
 var Model = {
-    mode: "all",
-    isInit : true,
     launches : [],
     activeVideo: "",
-    monthCover : 4,
     activeStartDate: "",
     activeEndDate: "",
     pageViews: [],
-
+    pageHistory: [ListPageView],
+    currentPage: ListPageView, 
+    lastPage: null,
     __init__ : function(stuff) {
         this.activeStartDate  = this.formatTime();
         console.log(this.activeStartDate);
@@ -147,6 +146,7 @@ var Model = {
 var updateList = new CustomEvent("updateList");
 var updateVideo = new CustomEvent("updateVideo");
 var goToIndividual = new CustomEvent("individual");
+var changePage = new CustomEvent("changePage");
 
 Model.__init__();
 Model.setViews([ListPageView,IndividualLaunchPageView]);
@@ -157,6 +157,11 @@ document.addEventListener("individual", ()=> {
         console.log(view)
         view.toggleDisplay();
     })
+})
+
+document.addEventListener("changePage", ()=>{
+    Model.lastPage.toggleDisplay();
+    Model.currentPage.toggleDisplay();
 })
 
 document.dispatchEvent(updateList);
