@@ -71,8 +71,7 @@
     </div>
   </nav>
 
-  <div id="video-placeholder">
-      <script src="https://www.youtube.com/iframe_api"></script>
+  <div id="image-placeholder">
   </div>
 
   
@@ -90,12 +89,46 @@
         <li><a href="individual_launch.html">kenji</a></li>
       </ul>
   </div>
-  <div id="individual-page">
+  <div id="individual-page" style="display:none;" >
+  
+    <div id="map"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=ecole%20de%20technology%20superieur&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
 
+    <div id="mission-info" >
+        <h1>MISSION INFORMATION</h1>
+        <!-- <table>
+            <tr>
+              <td>Company Name: placeholder</td>
+            </tr>
+            <tr>
+              <td>Vehicle info: </td>
+            </tr>
+            <tr>
+              <td>Customer</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+            </tr>
+            <tr>
+              <td>Summary</td>
+            </tr>
+            <tr>
+              <td>Magazzini Alimentari Riuniti</td>
+            </tr>
+          </table> -->
+  
+          <ul>
+            <li id="company-name">Company Name: placeholder</li>
+            <li id="vehicle">Vehicle info: placeholder</li>
+            <li id="customer">Customer: placeholder</li>
+            <li id="individual-date">Date: placeholder</li>
+            <li id="individual-description">Description: placeholder</li>
+          </ul>
+    </div>
   </div>
 
-
-    <script src="model.js"></script>
-    <script src="views.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/Individual_loader.js"></script>
+    <script src="js/views.js"></script>
+    <script src="js/model.js"></script>
 </body>
 </html>

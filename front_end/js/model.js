@@ -6,7 +6,7 @@ var Model = {
     monthCover : 4,
     activeStartDate: "",
     activeEndDate: "",
-    pageViews: [IndividualLaunchPageView, ListPageView],
+    pageViews: [],
 
     __init__ : function(stuff) {
         this.activeStartDate  = this.formatTime();
@@ -34,10 +34,10 @@ var Model = {
         //this.fetchData(this.activeStartDate);
         return null;
     },
-
-    fetchData: function(startTime) {
-
+    setViews : function(views) {
+        views.forEach((view)=>{this.pageViews.push(view)});
     },
+
     formatApiTime : function (timeString) {
         let timeArray = timeString.split(",")
         let day = timeArray[0].split(" ")[1];
@@ -47,13 +47,10 @@ var Model = {
     },
     addFourMonths: function(formattedTime) {
         let timeArray = formattedTime.split("-");
-        console.log(timeArray);
         month = Number(timeArray[1]) + 4;
-        console.log(month);
         if (month>12) {
             month -=12;
             timeArray[0] = (Number(timeArray[0])+1).toString();
-            console.log(timeArray[0]);
         }
         timeArray[1] = month.toString();
         // return year - month - day
@@ -72,7 +69,11 @@ var Model = {
             date: launchApiObject.net,
             id: launchApiObject.id,
             vidURL: launchApiObject.vidURL,
-            lsp : launchApiObject.lsp
+            lsp : launchApiObject.lsp,
+            location : {
+                longitude: launchApiObject.location.longitude,
+                latitude: launchApiObject.location.latitude
+            }
         }
         //The lsp returns an intetger
     },
@@ -85,10 +86,6 @@ var Model = {
         if (Number(leftTimeArray[1]) < rightTimeArray[1])
             return true;
         return Number(leftTimeArray[0]) <= rightTimeArray[0];
-
-    },
-    filter: function(){
-
     },
     formatTime: function() {
         let d = Date(Date.now()).toString();
@@ -152,10 +149,14 @@ var updateVideo = new CustomEvent("updateVideo");
 var goToIndividual = new CustomEvent("individual");
 
 Model.__init__();
+Model.setViews([ListPageView,IndividualLaunchPageView]);
 document.addEventListener("updateList", ()=> {ListView.update()});
-document.addEventListener("updateVideo", ()=> {VideoView.update()});
+document.addEventListener("updateVideo", ()=> {ImageView.update()});
 document.addEventListener("individual", ()=> {
     Model.pageViews.forEach((view)=>{
+        console.log(view)
         view.toggleDisplay();
     })
 })
+
+document.dispatchEvent(updateList);

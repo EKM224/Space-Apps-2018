@@ -21,9 +21,11 @@ function onYouTubeIframeAPIReady() {
             loop: 1,
         },
         events: {
-            onReady: initialize
+            onReady: initialize,
+            onload : other
         }
     });
+
 }
 
 function initialize(event){
@@ -31,14 +33,13 @@ function initialize(event){
   event.target.setVolume(50);
   event.target.mute();
   event.target.playVideo();
+
 }
 
-function addRow(lauch) {
-    var list = document.querySelector("ul");
-    var li = document.createElement("li");
-    // document.createElement("div");
-    // div.innerText = lauch.rocketName;
-    // document.createElement("div");
-    li.innerHTML = 'content';
-    list.appendChild(li);
+//this does not function right now for some reason, the onload function that works is found in view,
+// as an immediate init after object decleration
+function onLoad(event) {
+    VideoView.hook = document.querySelector("#video-placeholder");
+    console.log("============================")
+    console.log(VideoView);
 }

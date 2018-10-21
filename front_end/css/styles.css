@@ -213,7 +213,7 @@ html, body {
     max-height: 20px;
   }
   
-  #video-placeholder {
+  #image-placeholder {
     height: 100%;
     position: fixed;
     right: 0;
