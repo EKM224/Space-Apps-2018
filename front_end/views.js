@@ -1,9 +1,8 @@
 
 var ListView = {
-    hook: document.querySelector("#list"),
+    hook: document.querySelector("#hookId"),
     update: function() { 
         let list = document.querySelector("list");
-        list.empty();
         let i = 0;
         Model.launches.forEach((launchInfo)=> {
             let listElement = generateListElement(launchInfo, i);
@@ -14,10 +13,11 @@ var ListView = {
     toggleDisplay: function() {
         toggleHook.call(this);
     }
+
 }
 
 var VideoView = {
-    hook : document.querySelector("#video-placeholder"),
+    hook : document.querySelector("#something"),
     update: function() {
         changeVideo(Model.videoUrl);
     },
@@ -41,8 +41,8 @@ var ListPageView = {
     }
 }
 
-var IndividualLaunchPageView = {
-    hook: document.querySelector("#individual-page"),
+var IndividualLaunchView = {
+    hook: document.querySelector("#"),
     update: function(launchIndex) {
         generateListElement(launchIndex);
     },
@@ -55,6 +55,7 @@ var IndividualLaunchPageView = {
 // Helper functions ========================
 
 function toggleHook() {
+
     if (this.hook.style.display == "none") {
         this.hook.style.display = "block";
     }
