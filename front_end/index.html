@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Index</title>
+  <title>SpaceSight</title>
   <meta charset="utf-8">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-        <a class="navbar-brand" href="#"><img src="css/res/logo1.png" class="logo" id="logoimg"><h1 class="logo" id="logoh1"><b>ORONOS</b></h1></a>
+        <a class="navbar-brand" href="#"><img src="css/res/logo1.png" class="logo" id="logoimg"><h1 class="logo" id="logoh1"><b>SpaceSight</b></h1></a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
@@ -54,12 +54,13 @@
               <li><a class="category-elements" href="#">Category 5</a></li>
             </ul>
           </li> -->
+          <li><a id="back" href="#"><img class="btn btn-default" id="back-button" src="css/res/back-button.png"><span>Back</span></a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Near You</a></li>
           <li>
             <form class="navbar-form navbar-left">
               <div class="form-group">
-                  <input id="myInput" onkeyup="myFunction()" type="text" class="form-control" placeholder="Search">
+                  <input id="search" onkeyup="searchFunction()" type="text" class="form-control" placeholder="Search">
               </div>
               <button type="submit" class="btn btn-default"><img id="search-logo" src="css/res/search-logo1.png"></button>
           </form>
@@ -77,17 +78,19 @@
   
   <div id="list">
     <h1>UPCOMING LAUNCHES</h1>
-      <ul id="myUL">
-        <li><a href="individual_launch.html">hi</a></li>
-        <li><a href="individual_launch.html">I</a></li>
-        <li><a href="individual_launch.html">am</a></li>
-        <li><a href="individual_launch.html">mohamed</a></li>
+      <ul>
+        <li><a company="nasa" payload="food" date="january" href="individual_launch.html">hi</a></li>
+        <li><a company="nasa" payload="astronaut" date="january" href="individual_launch.html">I</a></li>
+        <li><a company="nasa" payload="astronaut" date="january" href="individual_launch.html">am</a></li>
+        <li><a company="nasa" payload="food" date="january" href="individual_launch.html">mohamed</a></li>
         <li><a href="individual_launch.html">alex</a></li>
         <li><a href="individual_launch.html">evan</a></li>
         <li><a href="individual_launch.html">nathaniel</a></li>
         <li><a href="individual_launch.html">kenji</a></li>
-        
       </ul>
+  </div>
+  <div id="individual-page">
+
   </div>
 
 

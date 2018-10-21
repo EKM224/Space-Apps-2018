@@ -6,6 +6,7 @@ var Model = {
     monthCover : 4,
     activeStartDate: "",
     activeEndDate: "",
+    pageViews: [IndividualLaunchPageView, ListPageView],
 
     __init__ : function(stuff) {
         this.activeStartDate  = this.formatTime();
@@ -148,7 +149,13 @@ var Model = {
 //event UpdateView (set off by Model)
 var updateList = new CustomEvent("updateList");
 var updateVideo = new CustomEvent("updateVideo");
+var goToIndividual = new CustomEvent("individual");
 
 Model.__init__();
 document.addEventListener("updateList", ()=> {ListView.update()});
 document.addEventListener("updateVideo", ()=> {VideoView.update()});
+document.addEventListener("individual", ()=> {
+    Model.pageViews.forEach((view)=>{
+        view.toggleDisplay();
+    })
+})
