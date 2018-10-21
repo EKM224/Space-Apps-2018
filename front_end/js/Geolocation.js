@@ -35,7 +35,8 @@ function findNearbyLaunch(yourPosition) {
 
     }
     if (count === 0){
-        document.getElementById("no-launches-nearby").style.display = "block";
+        var launchMessage = document.getElementById("no-launch-nearby");
+        launchMessage.classList.toggle("no-launch-visibilty");
         for (y in li){
             if (y.index == closestID)
                 y.style.display = "";
