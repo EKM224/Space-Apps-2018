@@ -260,8 +260,15 @@ html, body {
     padding: 0 0 0 7px;
   }
 
-  #list li:nth-child(2n-1) {
+  #list li:nth-child(2n) {
     background-color: #ffffff;
     color: #000000;
   }
 
+  #no-launch-nearby {
+    height: 0px !important;
+  }
+
+  .no-launch-visibility {
+    height: 40px !important;
+  }
