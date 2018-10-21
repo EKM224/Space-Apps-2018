@@ -19,8 +19,8 @@ var ListView = {
     }
 }
 
-var VideoView = {
-    hook : null,
+var ImageView = {
+    hook : document.querySelector("#image-placeholder"),
     update: function() {
         changeVideo(Model.videoUrl);
     },
@@ -29,17 +29,9 @@ var VideoView = {
     }
 }
 
-setTimeout(2500, function(){    console.log("loadfinished");
-VideoView.hook = document.querySelector("#video-placeholder");})
-document.querySelector("#video-placeholder").addEventListener("load", ()=> {
-    setTimeout(500, function(){    console.log("loadfinished");
-    VideoView.hook = document.querySelector("#video-placeholder");})
-})
-
-
 var ListPageView = {
     hook: null,
-    childViews : [ListView, VideoView],
+    childViews : [ListView, ImageView],
     update : function() {
         this.childViews.forEach((view)=> {
             view.update();
@@ -69,6 +61,7 @@ var IndividualLaunchPageView = {
 // Helper functions ========================
 
 function toggleHook() {
+    console.log(this);
     if (this.hook.style.display == "none") {
         this.hook.style.display = "block";
     }

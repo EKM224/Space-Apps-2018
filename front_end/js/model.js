@@ -38,9 +38,6 @@ var Model = {
         views.forEach((view)=>{this.pageViews.push(view)});
     },
 
-    fetchData: function(startTime) {
-
-    },
     formatApiTime : function (timeString) {
         let timeArray = timeString.split(",")
         let day = timeArray[0].split(" ")[1];
@@ -74,8 +71,8 @@ var Model = {
             vidURL: launchApiObject.vidURL,
             lsp : launchApiObject.lsp,
             location : {
-                longitude: launchApiObject.location[0].longitude,
-                latitude: launchApiObject.location[0].latitude
+                longitude: launchApiObject.location.longitude,
+                latitude: launchApiObject.location.latitude
             }
         }
         //The lsp returns an intetger
@@ -89,10 +86,6 @@ var Model = {
         if (Number(leftTimeArray[1]) < rightTimeArray[1])
             return true;
         return Number(leftTimeArray[0]) <= rightTimeArray[0];
-
-    },
-    filter: function(){
-
     },
     formatTime: function() {
         let d = Date(Date.now()).toString();
@@ -158,9 +151,10 @@ var goToIndividual = new CustomEvent("individual");
 Model.__init__();
 Model.setViews([ListPageView,IndividualLaunchPageView]);
 document.addEventListener("updateList", ()=> {ListView.update()});
-document.addEventListener("updateVideo", ()=> {VideoView.update()});
+document.addEventListener("updateVideo", ()=> {ImageView.update()});
 document.addEventListener("individual", ()=> {
     Model.pageViews.forEach((view)=>{
+        console.log(view)
         view.toggleDisplay();
     })
 })
