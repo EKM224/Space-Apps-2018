@@ -4,7 +4,7 @@
     }
 } */
 
-function findNearbyLaunch() {
+/* function findNearbyLaunch() {
 
     let yourPosition = navigator.geolocation.getCurrentPosition()
     let minDistance = model.launches[0];
@@ -45,7 +45,7 @@ function findNearbyLaunch() {
                 y.style.display = "none";
         }
     }
-}
+} */
 
 /* function findNearbyLaunch(yourPosition) {
 
